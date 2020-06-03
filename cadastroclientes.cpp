@@ -13,26 +13,28 @@ int main()
     };
     struct ficha_client cadastro;
     
-    printf("type the name of the client\n");
+    printf("Escreva o nome do cliente\n");
     gets(cadastro.name);
     
-    printf("type the age of the client\n");
+    printf("Escreva a idade do cliente\n");
     scanf("%d",&cadastro.age);
     
-    printf("type the cpf of the client\n");
+    printf("Escreva o CPF sem caracteres especiais\n");
     scanf("%d",&cadastro.cpf);
     
     typedwrong:
-    printf("type the password\n");
+    printf("Escreva a senha APENAS NUMEROS\n");
     scanf("%d",&cadastro.password);
-    printf("type the password again\n");
+    printf("Escreva novamente a senha APENAS NUMEROS\n");
     scanf("%d",&cadastro.repassword);
         if ((cadastro.repassword) != (cadastro.password))
         {
-            printf("you typed wrong, type again\n");
+            printf("Voce fez algo errado, tente novamente\n");
             goto typedwrong;
         }
                 else
-                    printf("your account is now created!");
+                    printf("Conta criada com sucesso!\n");
+                
+    system("pause");
     return 0;
 }
